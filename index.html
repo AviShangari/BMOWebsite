@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>BMO - UI AODA Test</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/your-styles-here.css" />
+    <link rel="stylesheet" href="fonts/heebo.css" />
+  </head>
+  <body>
+    <div class="test-container">
+      <h1 class="test-heading">BMO Accessiblity Test for UI Devs</h1>
+      <header>
+        <h1 class="test-heading">Create an accessible navigation</h1>
+        <button
+          id="showNavigation"
+          aria-expanded="false"
+          aria-controls="main-navigation"
+        >
+          Menu
+        </button>
+        <nav class="navigation" id="main-navigation">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Banking</a></li>
+            <li><a href="#">Hockey</a></li>
+            <li><a href="#">Good Food</a></li>
+            <li><a href="#">UI Development</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main-content" id="main-content">
+        <h1 class="test-heading">Create an accessible form</h1>
+        <form>
+          <h2 class="test-heading2">Text Inputs</h2>
+          <label for="text-input"> Enter text: </label>
+          <input
+            type="text"
+            id="text-input"
+            name="text-input"
+            aria-required="true"
+            placeholder="Create Text Input with label"
+          />
+          <label for="num-input"> Enter a number: </label>
+          <input
+            type="number"
+            id="num-input"
+            name="num-input"
+            aria-required="true"
+            placeholder="Create a Number input with label"
+          />
+          <label for="email-input">Enter an email: </label>
+          <input
+            type="email"
+            id="email-input"
+            name="email-input"
+            aria-required="true"
+            placeholder="Create an Email with label"
+          />
+          <h2 class="test-heading2">Radio Inputs</h2>
+          <fieldset>
+            <legend>Select an option:</legend>
+
+            <input
+              type="radio"
+              id="option1"
+              name="radio-group"
+              value="option1"
+            />
+            <label for="option1">Option 1</label>
+
+            <input
+              type="radio"
+              id="option2"
+              name="radio-group"
+              value="option2"
+            />
+            <label for="option2">Option 2</label>
+
+            <input
+              type="radio"
+              id="option3"
+              name="radio-group"
+              value="option3"
+            />
+            <label for="option3">Option 3</label>
+          </fieldset>
+
+          <h2 class="test-heading2">Multiline Input</h2>
+          <label for="multiline-text">Enter a message:</label>
+          <br />
+          <textarea
+            id="multiline-text"
+            name="multiline-text"
+            rows="5"
+            cols="60"
+            aria-required="true"
+          ></textarea>
+        </form>
+        <h1 class="test-heading">
+          Bonus Marks: Create an accessible modal with Keyboard Trap.(only if
+          everything else is complete)
+        </h1>
+        <button class="modal-trigger">Modal Trigger</button>
+        <div class="modal">
+          <button>Close Modal</button>
+          <div class="modal-header">
+            <div>
+              <h1>This is a modal title 1</h1>
+            </div>
+          </div>
+          <div class="modal-body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
+            </p>
+          </div>
+        </div>
+        <div class="overlay"></div>
+      </main>
+      <footer>
+        <h1 class="test-heading">footer</h1>
+      </footer>
+    </div>
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
+    <script src="js/your-js-here.js"></script>
+  </body>
+</html>
