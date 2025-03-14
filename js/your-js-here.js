@@ -10,7 +10,16 @@ function toggleNav(event) {
   nav_bar.classList.toggle("show");
 }
 
+// Close menu when clicking outside
+function closeNav(event) {
+  if (!nav_bar.contains(event.target) && !show_nav.contains(event.target)) {
+    nav_bar.classList.remove("show");
+    show_nav.setAttribute("aria-expanded", "false");
+  }
+}
+
 show_nav.addEventListener("click", toggleNav);
+document.addEventListener("click", closeNav);
 
 // Use enter to select radio options
 document.addEventListener("keydown", function (event) {
